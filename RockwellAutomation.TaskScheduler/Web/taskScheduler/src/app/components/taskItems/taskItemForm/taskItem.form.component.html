@@ -1,0 +1,41 @@
+<div class="card mt-3">
+    <div class="card-body" *ngIf="todoForm">
+        <h2>Add New Task Item</h2>
+        <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label class="col-md-4">Web Url</label>
+                <input type="text" class="form-control" formControlName="webUrl" #webUrl required />
+                <div *ngIf="todoForm.controls['webUrl'].invalid && (todoForm.controls['webUrl'].dirty || todoForm.controls['webUrl'].touched)"
+                    class="alert alert-danger">
+                    <span *ngIf="todoForm.controls['webUrl'].hasError('required')">
+                        Web Url is required.
+                    </span>
+                    <span *ngIf="todoForm.controls['webUrl'].value && todoForm.controls['webUrl'].invalid">
+                        Invalid Web Url.
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">Cron Expression</label>
+                <input type="text" class="form-control" formControlName="cronExpression" #cronExpression required/>
+                <div *ngIf="todoForm.controls['cronExpression'].invalid && (todoForm.controls['cronExpression'].dirty || todoForm.controls['cronExpression'].touched)"
+                    class="alert alert-danger">
+                    <span *ngIf="todoForm.controls['cronExpression'].hasError('required')">
+                        Cron Expression is required.
+                    </span>
+                </div>
+                <div *ngIf="(todoForm.controls['cronExpression'].dirty || todoForm.controls['cronExpression'].touched) &&todoForm.value.cronExpression && !isValidCronExpression(todoForm.value.cronExpression)" class="alert alert-danger">
+                    <span>
+                        Invalid Cron Expression.
+                    </span>
+                </div>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary mr-2" style="margin-right: 10px;"
+                    [disabled]="todoForm.pristine || todoForm.invalid">Submit
+                </button>
+                <button type="button" class="btn btn-secondary ml-1" (click)="clearForm()">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>

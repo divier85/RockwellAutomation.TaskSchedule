@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h1>Task Schedule List</h1>
+
+<task-item-form></task-item-form>
+
+    <div *ngIf="taskItems">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Task Number</th>
+                    <th>Web Url</th>
+                    <th>Cron Expression</th>
+                    <th>Date Added</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let taskItem of taskItems | async">
+                    <td>{{ taskItem.id }}</td>
+                    <td>{{ taskItem.webUrl }}</td>
+                    <td>{{ taskItem.cronExpression }}</td>
+                    <td>{{ taskItem.dateAdded  | date:'short'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

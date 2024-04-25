@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h1>Execution Task List</h1>
+
+    <div *ngIf="executionTaskItems">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Execution Number</th>
+                    <th>Task Number</th>
+                    <th>Web Url</th>
+                    <th>Cron Expression</th>
+                    <th>Removed Headers</th>
+                    <th>Executed Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let taskItem of executionTaskItems | async">
+                    <td>{{ taskItem.id }}</td>
+                    <td>{{ taskItem.taskItemId }}</td>
+                    <td>{{ taskItem.webUrl }}</td>
+                    <td>{{ taskItem.cronExpression }}</td>
+                    <td><p>{{ taskItem.headers }}</p></td>
+                    <td>{{ taskItem.dateAdded  | date:'short'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
