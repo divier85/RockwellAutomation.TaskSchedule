@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\BaseController.cs~RF2c7bac2.TMP" />
+    <None Remove="Services\ExecutionTaskItem\Command\Post\PostExecutionTaskItemCommandHandler.cs~RF5affa78.TMP" />
+    <None Remove="Services\TaskItem\Command\Post\PostTaskItemCommand.cs~RF5841e13.TMP" />
+    <None Remove="Services\TaskItem\Command\Post\TaskItemCommandPayload.cs~RF5795778.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NCrontab.Scheduler.AspNetCore" Version="1.2.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Data\RockwellAutomation.TaskScheduler.Data.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Model\RockwellAutomation.TaskScheduler.Model.csproj" />
+  </ItemGroup>
+
+</Project>

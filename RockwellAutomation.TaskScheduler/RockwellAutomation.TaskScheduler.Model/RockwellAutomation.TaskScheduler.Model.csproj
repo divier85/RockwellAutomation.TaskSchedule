@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ExecutionTaskItem\Query\Items\ExecutionTaskItemModel.cs~RF64f6dae.TMP" />
+    <None Remove="TaskItem\Query\Items\TaskItemModel.cs~RF2b51fe1.TMP" />
+  </ItemGroup>
+
+</Project>
