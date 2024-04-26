@@ -26,7 +26,7 @@ namespace RockwellAutomation.TaskScheduler.API.Services.TaskItem.Command.Post
                 {
                     CronExpression = command.CronExpression,
                     WebUrl = command.WebUrl,
-                    DateAdded = DateTime.UtcNow,
+                    DateAdded = DateTime.Now,
                     IsActive = true
                 };
 
@@ -53,7 +53,7 @@ namespace RockwellAutomation.TaskScheduler.API.Services.TaskItem.Command.Post
                         var executionTask = new Entities.ExecutionTaskItem()
                         {
                             TaskItemId = taskId,
-                            DateAdded = DateTime.UtcNow,
+                            DateAdded = DateTime.Now,
                             Headers = response.Headers.ToString().Length <= 1000
                             ? response.Headers.ToString()
                             : response.Headers.ToString().Substring(0, 1000)

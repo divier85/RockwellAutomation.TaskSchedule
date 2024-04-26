@@ -20,7 +20,7 @@ namespace RockwellAutomation.TaskScheduler.API.Services.ExecutionTaskItem.Comman
 
                 var item = new Entities.ExecutionTaskItem()
                 {
-                    DateAdded = DateTime.UtcNow,
+                    DateAdded = DateTime.Now,
                     TaskItemId = command.TaskItemId,
                     Headers = string.Empty
                 };
