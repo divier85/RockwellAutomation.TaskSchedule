@@ -7,7 +7,7 @@ using System;
 
 namespace RockwellAutomation.TaskScheduler.Service.TaskItem.Query.Items
 {
-    public class GetTaskItemsQueryHandler : IRequestHandler<GetTaskItemsQueryParameters, List<TaskItemModel>>, IEventHandlerAssembly
+    public class GetTaskItemsQueryHandler : IRequestHandler<GetTaskItemsQueryParameters, List<TaskItemModel>>
     {
         private readonly RockwellTaskSchedulerDbContext _context;
         private readonly ILogger<GetTaskItemsQueryHandler> _logger;
