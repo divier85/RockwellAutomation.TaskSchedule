@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using Microsoft.Extensions.Logging;
 using RockwellAutomation.TaskScheduler.Data;
 using RockwellAutomation.TaskScheduler.Model.ExecutionTaskItem.Query.Items;
 
-namespace RockwellAutomation.TaskScheduler.API.Services.ExecutionTaskItem.Query.Items
+namespace RockwellAutomation.TaskScheduler.Service.ExecutionTaskItem.Query.Items
 {
     public class GetExecutionTaskItemsQueryHandler : IRequestHandler<GetExecutionTaskItemsQueryParameters, List<ExecutionTaskItemModel>>
     {

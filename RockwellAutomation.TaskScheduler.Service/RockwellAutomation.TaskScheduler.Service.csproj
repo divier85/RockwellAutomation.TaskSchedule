@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="NCrontab.Scheduler.AspNetCore" Version="1.2.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Data\RockwellAutomation.TaskScheduler.Data.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Model\RockwellAutomation.TaskScheduler.Model.csproj" />
+  </ItemGroup>
+
+</Project>

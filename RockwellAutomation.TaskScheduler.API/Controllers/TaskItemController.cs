@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using RockwellAutomation.TaskScheduler.API.Services.TaskItem.Command.Post;
+using RockwellAutomation.TaskScheduler.Service.TaskItem.Command.Post;
 using Swashbuckle.AspNetCore.Annotations;
-using TaskItems = RockwellAutomation.TaskScheduler.API.Services.TaskItem.Query.Items;
-using ExecutionTaskItems = RockwellAutomation.TaskScheduler.API.Services.ExecutionTaskItem.Query.Items;
+using TaskItems = RockwellAutomation.TaskScheduler.Service.TaskItem.Query.Items;
+using ExecutionTaskItems = RockwellAutomation.TaskScheduler.Service.ExecutionTaskItem.Query.Items;
 
 namespace RockwellAutomation.TaskScheduler.API.Controllers
 {

@@ -1,13 +1,17 @@
 ﻿using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using RockwellAutomation.TaskScheduler.Data;
 using RockwellAutomation.TaskScheduler.Model.TaskItem.Query.Items;
+using System;
 
-namespace RockwellAutomation.TaskScheduler.API.Services.TaskItem.Query.Items
+namespace RockwellAutomation.TaskScheduler.Service.TaskItem.Query.Items
 {
-    public class GetTaskItemsQueryHandler : IRequestHandler<GetTaskItemsQueryParameters, List<TaskItemModel>>
+    public class GetTaskItemsQueryHandler : IRequestHandler<GetTaskItemsQueryParameters, List<TaskItemModel>>, IEventHandlerAssembly
     {
         private readonly RockwellTaskSchedulerDbContext _context;
         private readonly ILogger<GetTaskItemsQueryHandler> _logger;
+       
 
         public GetTaskItemsQueryHandler(RockwellTaskSchedulerDbContext context,
             ILogger<GetTaskItemsQueryHandler> logger)

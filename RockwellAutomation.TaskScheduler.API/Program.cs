@@ -1,6 +1,7 @@
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using RockwellAutomation.TaskScheduler.Data;
+using RockwellAutomation.TaskScheduler.Service;
 using System.Reflection;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -30,13 +31,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 builder.Services.AddScoped(typeof(RockwellTaskSchedulerDbContext));
-
 builder.Services.AddDbContext<RockwellTaskSchedulerDbContext>(options =>
 {
     options.UseSqlServer(connectionString);
 });
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(EventHandlerAssembly).Assembly));
 
 builder.Services.AddFluentValidation(options =>
 {

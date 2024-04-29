@@ -1,11 +1,12 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using NCrontab;
 using RockwellAutomation.TaskScheduler.Data;
 using RockwellAutomation.TaskScheduler.Model.TaskItem.Command.Post;
 using Entities = RockwellAutomation.TaskScheduler.Data.Entity;
 
-namespace RockwellAutomation.TaskScheduler.API.Services.TaskItem.Command.Post
+namespace RockwellAutomation.TaskScheduler.Service.TaskItem.Command.Post
 {
     public class PostTaskItemCommandHandler : IRequestHandler<PostTaskItemCommand, TaskItemModel>
     {

@@ -3,7 +3,7 @@ using RockwellAutomation.TaskScheduler.Data;
 using RockwellAutomation.TaskScheduler.Model.ExecutionTaskItem.Command.Post;
 using Entities = RockwellAutomation.TaskScheduler.Data.Entity;
 
-namespace RockwellAutomation.TaskScheduler.API.Services.ExecutionTaskItem.Command.Post
+namespace RockwellAutomation.TaskScheduler.Service.ExecutionTaskItem.Command.Post
 {
     public class PostExecutionTaskItemCommandHandler : IRequestHandler<PostExecutionTaskItemCommand, ExecutionTaskItemModel>
     {

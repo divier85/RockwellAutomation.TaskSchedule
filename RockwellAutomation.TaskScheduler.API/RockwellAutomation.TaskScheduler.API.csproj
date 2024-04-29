@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Controllers\BaseController.cs~RF2c7bac2.TMP" />
-    <None Remove="Services\ExecutionTaskItem\Command\Post\PostExecutionTaskItemCommandHandler.cs~RF5affa78.TMP" />
-    <None Remove="Services\TaskItem\Command\Post\PostTaskItemCommand.cs~RF5841e13.TMP" />
-    <None Remove="Services\TaskItem\Command\Post\TaskItemCommandPayload.cs~RF5795778.TMP" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,8 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Data\RockwellAutomation.TaskScheduler.Data.csproj" />
-    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Model\RockwellAutomation.TaskScheduler.Model.csproj" />
+    <ProjectReference Include="..\RockwellAutomation.TaskScheduler.Service\RockwellAutomation.TaskScheduler.Service.csproj" />
   </ItemGroup>
 
 </Project>

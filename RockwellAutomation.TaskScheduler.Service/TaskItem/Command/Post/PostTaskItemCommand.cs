@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using RockwellAutomation.TaskScheduler.Model.TaskItem.Command.Post;
 
-namespace RockwellAutomation.TaskScheduler.API.Services.TaskItem.Command.Post
+namespace RockwellAutomation.TaskScheduler.Service.TaskItem.Command.Post
 {
     public class PostTaskItemCommand : IRequest<TaskItemModel>
     {
